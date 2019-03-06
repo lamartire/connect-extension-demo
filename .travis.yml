@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '10'
+cache:
+  directories:
+  - "~/.cache"
+install:
+- yarn install --frozen-lockfile
+script:
+- yarn build
+notifications:
+  slack:
+    secure: g3HFzXs+K8ftklEFLbZavxTUfDT9lfjOBoq3Jw1+dbR4E12sAgvCH70GYQfRLfJby+0Ru5Gd8js9PfXkkBa0OarmZgCh6xH6WCSTHC4I9H3+I5Xi9NoKwk1u1udDHH9n5Pnnyf8qJ2mcLToAbAEknDN1a+AmP3jZWAXcars6w7W5uzXex8gvu5jZkceKE6FOgmJR+jqD3W1Wo8SDuG1BENEBJHFWxVrlrYZ8g//tL7XivuJ6sWAwrbzu9cX1jeV9O2v/ec8uDQWkeHNGC2XvAiiLAX2vN7ui1FXoeBtbqBGldnhWuFdQbRH8VrkuFWCTAMNWcQHHUTllr9CI7W0e+ODSlBYxB5GTlY9CnSTAdjm97szyetfjpFhMou/oDP003x/nbRDmN9RaAkyFgQeIG3a/S1rvCY3x261QG6qVhQCx03O6VKL9++7JzZJpZZPOt1HkAUPQWM7bWp59K8zReSotefxL8f5OxMoDGOQTMs6W6f0F8FwTwAaAtGFbfAXiulZD+W/09/Kd80TyKY0jbuuSrxy9UijLnkAlSzTZu/7C29VqEGG4kH91XwB2P6AiYRl2AGANXwLoQTJuuCRccE3iEKcpQSxsGYXHsxx2yEEzWZt2m1mRVF/zLbBSXigeIatAV/GQyKMxr3QH2hzl7o7+5EedHHQDnPYVlJa3beI=

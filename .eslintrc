@@ -8,7 +8,8 @@
   "globals": {
     "Cypress": true,
     "cy": true,
-    "ENV": true
+    "ENV": true,
+    "chrome": true
   },
   "parser": "babel-eslint",
   "extends": [

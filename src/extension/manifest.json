@@ -3,12 +3,10 @@
   "version": "1.0",
   "description": "Connect extension demo",
   "manifest_version": 2,
-  "permissions": ["tabs", "https://*/*"],
+  "permissions": ["tabs", "webRequest", "webRequestBlocking", "https://*/*"],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "scripts": ["background.js"],
+    "persistent": true
   },
   "web_accessible_resources": ["injected.js", "browser.js"],
   "browser_action": {},
@@ -21,9 +19,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://*/*"],
       "run_at": "document_start",
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "all_frames": true
     }
   ]
 }

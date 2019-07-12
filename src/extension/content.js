@@ -7,7 +7,9 @@ function addScript(src, onLoad) {
 
 function addScripts(list, cb) {
   const evs = [];
+
   evs.length = list.length;
+
   list.forEach((src, index) => {
     addScript(src, () => {
       evs[index] = true;
@@ -19,12 +21,15 @@ function addScripts(list, cb) {
 }
 
 const loadScripts = ['browser.js', 'injected.js'];
+
 addScripts(loadScripts, function() {});
 
 const scriptsMap = loadScripts.reduce((map, item) => {
   const key = item.split('.')[0];
+
   // eslint-disable-next-line
   map[key] = true;
+
   return map;
 }, {});
 
